@@ -15,20 +15,20 @@ public class MeetingExample {
         oredCriteria = new ArrayList<Criteria>();
     }
 
-    public void setOrderByClause(String orderByClause) {
-        this.orderByClause = orderByClause;
-    }
-
     public String getOrderByClause() {
         return orderByClause;
     }
 
-    public void setDistinct(boolean distinct) {
-        this.distinct = distinct;
+    public void setOrderByClause(String orderByClause) {
+        this.orderByClause = orderByClause;
     }
 
     public boolean isDistinct() {
         return distinct;
+    }
+
+    public void setDistinct(boolean distinct) {
+        this.distinct = distinct;
     }
 
     public List<Criteria> getOredCriteria() {
@@ -605,63 +605,63 @@ public class MeetingExample {
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeIsNull() {
-            addCriterion("muptime is null");
+        public Criteria andMuotimeIsNull() {
+            addCriterion("muotime is null");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeIsNotNull() {
-            addCriterion("muptime is not null");
+        public Criteria andMuotimeIsNotNull() {
+            addCriterion("muotime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeEqualTo(Date value) {
-            addCriterion("muptime =", value, "muptime");
+        public Criteria andMuotimeEqualTo(Date value) {
+            addCriterion("muotime =", value, "muotime");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeNotEqualTo(Date value) {
-            addCriterion("muptime <>", value, "muptime");
+        public Criteria andMuotimeNotEqualTo(Date value) {
+            addCriterion("muotime <>", value, "muotime");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeGreaterThan(Date value) {
-            addCriterion("muptime >", value, "muptime");
+        public Criteria andMuotimeGreaterThan(Date value) {
+            addCriterion("muotime >", value, "muotime");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("muptime >=", value, "muptime");
+        public Criteria andMuotimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("muotime >=", value, "muotime");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeLessThan(Date value) {
-            addCriterion("muptime <", value, "muptime");
+        public Criteria andMuotimeLessThan(Date value) {
+            addCriterion("muotime <", value, "muotime");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeLessThanOrEqualTo(Date value) {
-            addCriterion("muptime <=", value, "muptime");
+        public Criteria andMuotimeLessThanOrEqualTo(Date value) {
+            addCriterion("muotime <=", value, "muotime");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeIn(List<Date> values) {
-            addCriterion("muptime in", values, "muptime");
+        public Criteria andMuotimeIn(List<Date> values) {
+            addCriterion("muotime in", values, "muotime");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeNotIn(List<Date> values) {
-            addCriterion("muptime not in", values, "muptime");
+        public Criteria andMuotimeNotIn(List<Date> values) {
+            addCriterion("muotime not in", values, "muotime");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeBetween(Date value1, Date value2) {
-            addCriterion("muptime between", value1, value2, "muptime");
+        public Criteria andMuotimeBetween(Date value1, Date value2) {
+            addCriterion("muotime between", value1, value2, "muotime");
             return (Criteria) this;
         }
 
-        public Criteria andMuptimeNotBetween(Date value1, Date value2) {
-            addCriterion("muptime not between", value1, value2, "muptime");
+        public Criteria andMuotimeNotBetween(Date value1, Date value2) {
+            addCriterion("muotime not between", value1, value2, "muotime");
             return (Criteria) this;
         }
     }
@@ -674,7 +674,7 @@ public class MeetingExample {
     }
 
     public static class Criterion {
-        private String condition;
+        private final String condition;
 
         private Object value;
 
@@ -688,39 +688,7 @@ public class MeetingExample {
 
         private boolean listValue;
 
-        private String typeHandler;
-
-        public String getCondition() {
-            return condition;
-        }
-
-        public Object getValue() {
-            return value;
-        }
-
-        public Object getSecondValue() {
-            return secondValue;
-        }
-
-        public boolean isNoValue() {
-            return noValue;
-        }
-
-        public boolean isSingleValue() {
-            return singleValue;
-        }
-
-        public boolean isBetweenValue() {
-            return betweenValue;
-        }
-
-        public boolean isListValue() {
-            return listValue;
-        }
-
-        public String getTypeHandler() {
-            return typeHandler;
-        }
+        private final String typeHandler;
 
         protected Criterion(String condition) {
             super();
@@ -756,6 +724,38 @@ public class MeetingExample {
 
         protected Criterion(String condition, Object value, Object secondValue) {
             this(condition, value, secondValue, null);
+        }
+
+        public String getCondition() {
+            return condition;
+        }
+
+        public Object getValue() {
+            return value;
+        }
+
+        public Object getSecondValue() {
+            return secondValue;
+        }
+
+        public boolean isNoValue() {
+            return noValue;
+        }
+
+        public boolean isSingleValue() {
+            return singleValue;
+        }
+
+        public boolean isBetweenValue() {
+            return betweenValue;
+        }
+
+        public boolean isListValue() {
+            return listValue;
+        }
+
+        public String getTypeHandler() {
+            return typeHandler;
         }
     }
 }

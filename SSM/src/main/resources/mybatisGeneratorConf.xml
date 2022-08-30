@@ -26,9 +26,9 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 <!--        指定数据表的生成策略-->
-<!--        <table tableName="department" domainObjectName="Department" />-->
-<!--        <table tableName="meeting_room" domainObjectName="Meeting" />-->
-<!--        <table tableName="uuser" domainObjectName="Uuser" />-->
+        <table tableName="department" domainObjectName="Department" />
+        <table tableName="meeting_room" domainObjectName="Meeting" />
+        <table tableName="uuser" domainObjectName="Uuser" />
 <!--        多对多映射的中间表无需生成对应的实体类 -->
 
 

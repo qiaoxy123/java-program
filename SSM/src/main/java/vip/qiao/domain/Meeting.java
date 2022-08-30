@@ -1,8 +1,10 @@
 package vip.qiao.domain;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
-public class Meeting {
+public class Meeting implements Serializable {
     private Integer mid;
 
     private String mname;
@@ -19,7 +21,47 @@ public class Meeting {
 
     private Boolean time4;
 
-    private Date muptime;
+    private Date muotime;
+
+    private List<Uuser> uusers;
+
+    public Meeting() {
+    }
+
+    public Meeting(String mname) {
+        this.mname = mname;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (obj == null || obj.getClass() != this.getClass()) return false;
+        return this.getMname().equals(((Meeting) obj).getMname());
+    }
+
+    @Override
+    public String toString() {
+        return "Meeting{" +
+                "mid=" + mid +
+                ", mname='" + mname + '\'' +
+                ", maddress='" + maddress + '\'' +
+                ", mstate=" + mstate +
+                ", time1=" + time1 +
+                ", time2=" + time2 +
+                ", time3=" + time3 +
+                ", time4=" + time4 +
+                ", muotime=" + muotime +
+                ", uusers=" + uusers +
+                '}';
+    }
+
+    public List<Uuser> getUusers() {
+        return uusers;
+    }
+
+    public void setUusers(List<Uuser> uusers) {
+        this.uusers = uusers;
+    }
 
     public Integer getMid() {
         return mid;
@@ -85,11 +127,11 @@ public class Meeting {
         this.time4 = time4;
     }
 
-    public Date getMuptime() {
-        return muptime;
+    public Date getMuotime() {
+        return muotime;
     }
 
-    public void setMuptime(Date muptime) {
-        this.muptime = muptime;
+    public void setMuotime(Date muotime) {
+        this.muotime = muotime;
     }
 }
